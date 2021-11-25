@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7f209aac-5762-4746-9379-ff9cde9a12ed</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>too_failidega.py</StartupFile>
+    <StartupFile>KasutajadSalasonad.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -30,7 +30,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Passwords.txt" />
     <Content Include="TextFile.txt" />
+    <Content Include="Users.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

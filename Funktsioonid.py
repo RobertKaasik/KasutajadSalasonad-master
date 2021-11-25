@@ -34,6 +34,10 @@ def koik_kasutajad(users,passwords):
 		print(passwords[i])
 		i+=1
 
+def faili_sisu_umberkirjutamine(file:str,list_:list):
+	with open(file,"w") as f:
+		for slovo in list_:
+			f.write(slovo+"\n")
 
 
 

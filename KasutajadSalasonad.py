@@ -1,6 +1,9 @@
 from Funktsioonid import *
-users=["Marina"]
-passwords=["12345"]
+from too_failidega import *
+users=loe_failist_listisse("Users.txt")
+passwords=loe_failist_listisse("Passwords.txt")
+print(users)
+print(passwords)
 
 while True:
 	print("Näita kõike -0,Reg-1,Avt-2,Välja-3")
@@ -10,18 +13,18 @@ while True:
 	elif v==1:
 		print("Registreerimine")
 		while 1:
-			log=input("Kasutajatunnus")
+			log=input("Kasutajatunnus:")
 			if log not in users:
 				print("Tunnus soobib")
 				break
 			else:
 				print("See nimi juba on olemas listis")	
-		v=input("Arvuti-A või ise-I loob parool")
+		v=input("Arvuti-[A] või ise-[I] loob parool: ")
 		if v.upper()=="A":
 			pas=passautomat()
 		elif v.upper()=="I":			
 			while 1:
-				pas=input("Sisesta oma parool")
+				pas=input("Sisesta oma parool:")
 				tulemus=paskontroll(pas)
 				if tulemus==True:
 					users.append(log)
@@ -34,7 +37,8 @@ while True:
 		
 	elif v==3:
 		print("Välja")
+		faili_sisu_umberkirjutamine("Users.txt",users)
+		faili_sisu_umberkirjutamine("Passwords.txt",passwords)
 		break
-		#valmis
 	else:
 		print("On vaja valida 1,2 või 3")# kõik on olemas
